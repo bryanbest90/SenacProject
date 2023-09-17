@@ -8,25 +8,40 @@
 </head>
 <body>
   <header>
-    <h1>Meu Site</h1>
+    <h1 id="siteTitle">Meu Site</h1>
+    <style>
+      /* Adiciona algum estilo ao ícone do hambúrguer */
+      #menuIcon {
+        fill: #000; /* Cor do ícone */
+        width: 30px; /* Largura do ícone */
+        height: auto; /* Altura automática */
+        cursor: pointer; /* Transforma o cursor em ponteiro ao passar por cima */
+      }
+    </style>
   </header>
   
   <nav>
-    <img src="img\logo.png" alt="Logo" class="logo" onclick="window.location.href='index.html'">
-    <a href="#">Menu</a>
-    <a href="#">Categoria</a>
-    <a href="#">Produto</a>
-    <a href="#">Contato</a>
-    <a href="#">Carrinho</a>
-  </nav>
+    <img src="img\logo.png" alt="Logo da empresa" class="logo" id="logo" onclick="window.location.href='index.html'" aria-label="Logo da empresa">
+    <img src="img\hamburger-menu.svg" alt="Menu" id="menuIcon" onclick="toggleSubMenu('categoriaSubmenu')">
+    <div class="dropdown">
+      <a href="#" id="categoriaLink">Categoria</a>
+      <div class="submenu-content" id="categoriaSubmenu">
+        <a href="#">Vestuários</a>
+        <a href="#">Acessórios</a>
+      </div>
+    </div>
+    <a href="#" id="produtoLink">Produto</a>
+    <a href="#" id="contatoLink">Contato</a>
+    <a href="#" id="carrinhoLink">Carrinho</a>
+</nav>
 
   <div class="container">
-    <div class="card">
+    <div class="card" id="produto1Card">
       <a href="page2.html">
-        <img src="img\produto1" alt="Produto 1">
+        <img src="img\produto1" alt="Camisa dryfit" id="produto1Image">
         <div class="product-info">
-          <div class="product-name">
-            Nome do Produto 1 com quebra de linha após duas linhas
+          <div class="product-name" aria-label="Nome do Produto">
+            Camisa dryfit
           </div>
           <div class="product-price">
             R$ 100,00
@@ -36,61 +51,61 @@
           </div>
         </div>
       </a>
-      <button onclick="comprarProduto('produto1')">Comprar</button>
+      <button aria-label="Botão Comprar Produto 1" onclick="comprarProduto('produto1')" id="comprarProduto1Button">Comprar</button>
     </div>
     <div class="card">
       <a href="page2.html">
-        <img src="img/produto2.jpg" alt="Produto 2">
+        <img src="img\produto2.jpg" alt="Anilhas 50kg com alteres" id="produto2Image">
         <div class="product-info">
           <div class="product-name">
-            Nome do Produto 1 com quebra de linha após duas linhas
+            Anilhas 50kg
           </div>
           <div class="product-price">
-            R$ 100,00
+            R$ 450,00
           </div>
           <div class="product-rating">
             &#9733;&#9733;&#9733;&#9733;&#9734; <!-- Representação das estrelas de avaliação -->
           </div>
         </div>
       </a>
-      <button onclick="comprarProduto('produto2')">Comprar</button>
+      <button aria-label="Botão Comprar Produto 2" onclick="comprarProduto('produto2')" id="comprarProduto2Button">Comprar</button>
     </div>
     <!-- Adicionar mais produtos abaixo -->
     <!-- Produto 3 -->
     <div class="card">
       <a href="pagina3.html">
-        <img src="img/produto3.jpg" alt="Produto 3">
+        <img src="img\produto3.jpg" alt="Faixa Elástica de Compressão" id="produto3Image">
         <div class="product-info">
           <div class="product-name">
-            Nome do Produto 1 com quebra de linha após duas linhas
+            Faixa Elástica de Compressão
           </div>
           <div class="product-price">
-            R$ 100,00
+            R$ 25,00
           </div>
           <div class="product-rating">
             &#9733;&#9733;&#9733;&#9733;&#9734; <!-- Representação das estrelas de avaliação -->
           </div>
         </div>
       </a>
-      <button onclick="comprarProduto('produto3')">Comprar</button>
+      <button aria-label="Botão Comprar Produto 3" onclick="comprarProduto('produto3')" id="comprarProduto3Button">Comprar</button>
     </div>
     <!-- Produto 4 -->
     <div class="card">
       <a href="pagina4.html">
-        <img src="img/produto4.jpg" alt="Produto 4">
+        <img src="img\produto4.jpg" alt="Tapete Colchonete (Yoga, Pilates, Fitness, Ginástica) 1m x 50cm x 10mm" id="produto4Image">
         <div class="product-info">
           <div class="product-name">
-            Nome do Produto 1 com quebra de linha após duas linhas
+            Tapete Colchonete (Yoga, Pilates, Fitness, Ginástica) 1m x 50cm x 10mm
           </div>
           <div class="product-price">
-            R$ 100,00
+            R$ 20,00
           </div>
           <div class="product-rating">
             &#9733;&#9733;&#9733;&#9733;&#9734; <!-- Representação das estrelas de avaliação -->
           </div>
         </div>
       </a>
-      <button onclick="comprarProduto('produto4')">Comprar</button>
+      <button aria-label="Botão Comprar Produto 4" onclick="comprarProduto('produto4')" id="comprarProduto4Button">Comprar</button>
     </div>
   </div>
 
@@ -98,25 +113,25 @@
     <!-- Produto 5 -->
     <div class="card">
       <a href="pagina5.html">
-        <img src="img/produto5.jpg" alt="Produto 5">
+        <img src="img\produto5.jpg" alt="Colchonete de Academia em Espuma Alta Densidade Profissional D50 20mm Impermeável" id="produto5Image">
         <div class="product-info">
           <div class="product-name">
-            Nome do Produto 1 com quebra de linha após duas linhas
+            Colchonete de Academia em Espuma Alta Densidade Profissional D50 20mm Impermeável Ginastica e Pilates Costura Reforçada Fitness Exercícios Funcional Treino em Casa Mais Conforto
           </div>
           <div class="product-price">
-            R$ 100,00
+            R$ 63,00
           </div>
           <div class="product-rating">
             &#9733;&#9733;&#9733;&#9733;&#9734; <!-- Representação das estrelas de avaliação -->
           </div>
         </div>
       </a>
-      <button onclick="comprarProduto('produto5')">Comprar</button>
+      <button aria-label="Botão Comprar Produto 5" onclick="comprarProduto('produto5')" id="comprarProduto5Button">Comprar</button>
     </div>
     <!-- Produto 6 -->
     <div class="card">
       <a href="pagina6.html">
-        <img src="img/produto6.jpg" alt="Produto 6">
+        <img src="img\produto6.jpg" alt="Colchonete de Academia em Espuma Alta Densidade Profissional D50 20mm Impermeável" id="produto6Image">
         <div class="product-info">
           <div class="product-name">
             Nome do Produto 1 com quebra de linha após duas linhas
@@ -129,7 +144,7 @@
           </div>
         </div>
       </a>
-      <button onclick="comprarProduto('produto6')">Comprar</button>
+      <button aria-label="Botão Comprar Produto 6" onclick="comprarProduto('produto6')" id="comprarProduto6Button">Comprar</button>
     </div>
     <!-- Produto 7 -->
     <div class="card">
@@ -147,7 +162,7 @@
           </div>
         </div>
       </a>
-      <button onclick="comprarProduto('produto7')">Comprar</button>
+      <button aria-label="Botão Comprar Produto 7" onclick="comprarProduto('produto7')" id="comprarProduto7Button">Comprar</button>
     </div>
     <!-- Produto 8 -->
     <div class="card">
@@ -165,7 +180,7 @@
           </div>
         </div>
       </a>
-      <button onclick="comprarProduto('produto8')">Comprar</button>
+      <button aria-label="Botão Comprar Produto 8" onclick="comprarProduto('produto8')" id="comprarProduto8Button">Comprar</button>
     </div>
   </div>
   
@@ -173,14 +188,19 @@
 
   <!-- Adicionar mais linhas com produtos abaixo -->
 
-  <footer>
+  <footer id="siteFooter">
     <div class="social-links">
-      <a href="https://www.facebook.com" target="_blank">Facebook</a>
-      <a href="https://www.twitter.com" target="_blank">Twitter</a>
-      <a href="https://www.instagram.com" target="_blank">Instagram</a>
+      <a href="https://www.facebook.com" target="_blank" id="facebookLink">Facebook</a>
+      <a href="https://www.twitter.com" target="_blank" id="twitterLink">Twitter</a>
+      <a href="https://www.instagram.com" target="_blank" id="instagramLink">Instagram</a>
     </div>
   </footer>
-  <div id="navFooterBackToTop" onclick="scrollToTop()">Voltar ao Topo</div>
+
+  <!-- Voltar ao Topo -->
+  <div id="navFooterBackToTop" onclick="scrollToTop()">
+    <span id="voltarAoTopoText">Voltar ao Topo</span>
+  </div>
+
   <script src="script.js" defer></script>
 </body>
 </html>
