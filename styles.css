@@ -48,6 +48,9 @@ nav a:hover {
 .card img {
   max-width: 100%;
   height: auto;
+  width: 250px; /* Ajuste o valor conforme necessário */
+  height: 250px; /* Ajuste o valor conforme necessário */
+  object-fit: cover; /* Isso mantém a proporção e recorta a imagem se necessário */
 }
 
 .card button {
@@ -57,10 +60,48 @@ nav a:hover {
   padding: 10px 20px;
   margin-top: 10px;
   cursor: pointer;
+  border-radius: 10px;
+  margin: 10px;
 }
 
 .card button:hover {
   background-color: #ff5555;
+}
+
+/* Estilos específicos para a página 2 */
+.product-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.product-details h2 {
+  margin-top: 10px;
+}
+
+.size-options,
+.color-options {
+  margin-top: 10px;
+}
+
+.size-options label,
+.color-options label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.size-options select {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+.color-circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 5px;
 }
 
 /* Estilos responsivos */
@@ -77,4 +118,149 @@ nav a:hover {
   }
   
   nav a {
-    margin-bottom: 
+    margin-bottom: 5px;
+  }
+}
+/* ... Estilos anteriores ... */
+
+footer {
+  background-color: #f0f0f0;
+  padding: 20px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.social-links a {
+  margin: 0 10px;
+  color: #333;
+  text-decoration: none;
+}
+
+.social-links a:hover {
+  color: #cc3333;
+}
+
+/* Restante dos estilos */
+
+nav {
+  display: flex;
+  align-items: center;
+  background-color: #444;
+  padding: 10px 0;
+}
+
+nav .logo-link {
+  margin-right: auto;
+  text-align: center;
+  width: 120px; /* Largura da logo */
+}
+
+nav .logo {
+  width: 100%; /* Faz a logo ocupar todo o espaço disponível */
+  max-width: 100%; /* Limita o tamanho máximo à largura máxima da logo (120px) */
+  height: auto; /* Mantém a proporção da imagem */
+  cursor: pointer;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+}
+
+nav a:hover {
+  background-color: #555;
+}
+
+/* Restante dos estilos */
+/* Restante dos estilos */
+
+nav {
+  display: flex;
+  align-items: center;
+  background-color: #444;
+  padding: 10px 0;
+}
+
+nav .logo-link {
+  margin-right: auto;
+}
+
+nav .logo {
+  width: 100px; /* Largura fixa da logo */
+  height: 120px; /* Altura fixa da logo */
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+}
+
+nav a:hover {
+  background-color: #555;
+}
+
+/* Restante dos estilos */
+
+/* Restante dos estilos */
+
+.product-info {
+  margin-top: 10px;
+}
+
+.product-price {
+  font-weight: bold;
+  color: #333;
+}
+
+.product-rating {
+  margin-top: 5px;
+  font-size: 18px;
+  color: #FFD700; /* Cor amarela para as estrelas de avaliação */
+}
+
+/* Restante dos estilos */
+/* Restante dos estilos */
+
+.product-name {
+  margin-top: 10px;
+  font-size: 16px; /* Tamanho da fonte do nome do produto */
+  color: #333; /* Cor do texto do nome do produto */
+}
+
+/* Restante dos estilos */
+
+/* Restante dos estilos */
+
+#navFooterBackToTop {
+  display: none; /* Inicialmente oculto */
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#navFooterBackToTop:hover {
+  background-color: #555;
+}
+
+/* Mostra o link "Voltar ao topo" quando a página é rolada */
+body.show-back-to-top #navFooterBackToTop {
+  display: block;
+}
+
+/* Restante dos estilos */
+
+
+
+
+
+
+
