@@ -18,10 +18,10 @@ public class    ItensController {
 
     @CrossOrigin(origins = "*", allowedHeaders = "*") //conexão com o front, evita erros no navegador
     @PostMapping
-    public void saveItens(@RequestBody ItensRequestDTO data){
+    public Itens saveItens(@RequestBody ItensRequestDTO data){
         Itens itensData = new Itens(data);
         repository.save(itensData);
-        return;
+        return itensData;
 
     }
     @CrossOrigin(origins = "*", allowedHeaders = "*")
