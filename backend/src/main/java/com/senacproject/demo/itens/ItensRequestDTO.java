@@ -1,4 +1,6 @@
 package com.senacproject.demo.itens;
 
-public record ItensRequestDTO(String title, String image, Integer price) {
+import java.math.BigDecimal;
+
+public record ItensRequestDTO(String title, String image, BigDecimal price) {
 }

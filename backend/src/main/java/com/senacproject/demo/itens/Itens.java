@@ -6,6 +6,8 @@ import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
+import java.math.BigDecimal;
+
 @Table(name ="itens")
 @Entity(name = "itens")
 @Getter
@@ -17,12 +19,12 @@ public class Itens {
     private Long id;
     private String title;
     private String image;
-    private Double price;
+    private BigDecimal price;
 
     public Itens(ItensRequestDTO data){
         this.title = data.title();
         this.image = data.image();
-        this.price = Double.valueOf(data.price());
+        this.price = data.price();
     }
 
 }
