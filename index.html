@@ -39,10 +39,12 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
-              <i class="bi bi-heart"></i>
-            </a>
-            <span class="qty-info">5</span>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                  <i class="bi bi-heart" id="heart-icon"></i>
+              </a>
+              <span class="qty-info">0</span>
+          </li>
           </li>
           <li class="nav-item" id="bag-item">
             <a class="nav-link" href="#">
@@ -130,56 +132,13 @@
       </div>
     </div>
   </div>
-  <!-- BEST SELLERS -->
-  <div class="container" id="best-sellers">
+   <!-- BEST SELLERS -->
+   <div class="container">
     <h2 class="title primary-color">Best Sellers</h2>
-    <div class="row">
-      <div class="col-12 col-md-3">
-        <div class="card primary-bg-color">
-          <img src="https://assets.vtex.app/unsafe/276x240/center/middle/https%3A%2F%2Fdecathlonpro.vtexassets.com%2Farquivos%2Fids%2F2740699%2Fmicrofiber-towel-l-nero-1.jpg%3Fv%3D637517824330400000" class="card-img-top img-fluid" alt="Leggins">
-          <div class="card-body">
-            <p class="card-category secondary-color">Leggins</p>
-            <h5 class="card-title">Nome do produto</h5>
-            <p class="card-text primary-color">R$177.63</p>
-            <a href="#" class="btn btn-primary">Comprar</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-md-3">
-        <div class="card primary-bg-color">
-          <img src="https://assets.vtex.app/unsafe/276x240/center/middle/https%3A%2F%2Fdecathlonpro.vtexassets.com%2Farquivos%2Fids%2F2740699%2Fmicrofiber-towel-l-nero-1.jpg%3Fv%3D637517824330400000" class="card-img-top img-fluid" alt="Kimono">
-          <div class="card-body">
-            <p class="card-category secondary-color">Kimono</p>
-            <h5 class="card-title">Nome do produto</h5>
-            <p class="card-text primary-color">R$177.63</p>
-            <a href="#" class="btn btn-primary">Comprar</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-md-3">
-        <div class="card primary-bg-color">
-          <img src="https://assets.vtex.app/unsafe/276x240/center/middle/https%3A%2F%2Fdecathlonpro.vtexassets.com%2Farquivos%2Fids%2F2740699%2Fmicrofiber-towel-l-nero-1.jpg%3Fv%3D637517824330400000" class="card-img-top img-fluid" alt="Alteres">
-          <div class="card-body">
-            <p class="card-category secondary-color">Alteres</p>
-            <h5 class="card-title">Nome do produto</h5>
-            <p class="card-text primary-color">R$177.63</p>
-            <a href="#" class="btn btn-primary">Comprar</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-md-3">
-        <div class="card primary-bg-color">
-          <img src="https://assets.vtex.app/unsafe/276x240/center/middle/https%3A%2F%2Fdecathlonpro.vtexassets.com%2Farquivos%2Fids%2F2740699%2Fmicrofiber-towel-l-nero-1.jpg%3Fv%3D637517824330400000" class="card-img-top img-fluid" alt="Relógio">
-          <div class="card-body">
-            <p class="card-category secondary-color">produto</p>
-            <h5 class="card-title">Nome do produto</h5>
-            <p class="card-text primary-color">R$177.63</p>
-            <a href="#" class="btn btn-primary">Comprar</a>
-          </div>
-        </div>
-      </div>
+    <div class="row" id="best-sellers">
+        <!-- Os cards serão criados dinamicamente aqui -->
     </div>
-  </div>
+</div>
   <!-- BANNER DESTAQUE -->
   <div class="container-fluid" id="bottom-banner">
     <div class="row">
@@ -193,6 +152,7 @@
         <img srcset="https://t3.ftcdn.net/jpg/06/53/55/44/360_F_653554492_J67MYGrOVJFk9eN6YLW6ReWxqpCIAlkG.webp" alt="produto">
       </div>
     </div>
+  
   </div>
   <!-- PRODUTOS NOVOS -->
   <div class="container" id="new-products">
@@ -200,25 +160,25 @@
     <div class="row">
       <div class="col-12 col-md-3 d-none d-md-flex" id="new-products-banner">
         <p class="secondary-color">Os melhores</p>
-        <h3>Relógios</h3>
+        <h3>Fitness</h3>
         <p class="primary-color">pelos melhores preços</p>
       </div>
-      <div class="col-12 col-md-9">
+      <div id=""class="col-12 col-md-9">
         <div class="row">
           <div class="col-12 col-md-4">
             <div class="card primary-bg-color">
-              <img srcset="https://t3.ftcdn.net/jpg/06/53/55/44/360_F_653554492_J67MYGrOVJFk9eN6YLW6ReWxqpCIAlkG.webp" class="card-img-top img-fluid" alt="Relógio">
+              <img srcset="https://t3.ftcdn.net/jpg/06/53/55/44/360_F_653554492_J67MYGrOVJFk9eN6YLW6ReWxqpCIAlkG.webp" class="card-img-top img-fluid" alt="produto">
               <div class="card-body">
-                <p class="card-category">produto</p>
-                <h5 class="card-title">Nome do produto</h5>
-                <p class="card-text">R$177.63</p>
+                <p class="card-category"></p>
+                <h5 class="card-title"></h5>
+                <p class="card-text"></p>
                 <a href="#" class="btn btn-primary">Comprar</a>
               </div>
             </div>
           </div>
           <div class="col-12 col-md-4">
             <div class="card primary-bg-color">
-              <img srcset="https://t3.ftcdn.net/jpg/06/53/55/44/360_F_653554492_J67MYGrOVJFk9eN6YLW6ReWxqpCIAlkG.webp" class="card-img-top img-fluid" alt="Relógio">
+              <img srcset="https://t3.ftcdn.net/jpg/06/53/55/44/360_F_653554492_J67MYGrOVJFk9eN6YLW6ReWxqpCIAlkG.webp" class="card-img-top img-fluid" alt="Produto">
               <div class="card-body">
                 <p class="card-category">produto</p>
                 <h5 class="card-title">Nome do produto</h5>
@@ -240,7 +200,7 @@
           </div>
           <div class="col-12 col-md-4">
             <div class="card primary-bg-color">
-              <img srcset="https://t3.ftcdn.net/jpg/06/53/55/44/360_F_653554492_J67MYGrOVJFk9eN6YLW6ReWxqpCIAlkG.webp" class="card-img-top img-fluid" alt="Relógio">
+              <img srcset="https://t3.ftcdn.net/jpg/06/53/55/44/360_F_653554492_J67MYGrOVJFk9eN6YLW6ReWxqpCIAlkG.webp" class="card-img-top img-fluid" alt="Produto">
               <div class="card-body">
                 <p class="card-category">produto</p>
                 <h5 class="card-title">Nome do produto</h5>
@@ -299,7 +259,7 @@
         <div class="col-12 col-md-4 footer-column">
           <h3>Páginas</h3>
           <ul class="list-unstyled">
-            <li class="mb-2"><a href="#" class="secondary-color">Home</a></li>
+            <li class="mb-2"><a href="index.html" class="secondary-color">Home</a></li>
             <li class="mb-2"><a href="#" class="secondary-color">Categorias</a></li>
             <li class="mb-2"><a href="#" class="secondary-color">Promoções</a></li>
             <li class="mb-2"><a href="#" class="secondary-color">Contato</a></li>
@@ -342,5 +302,7 @@
       <p>Todos os direitos reservados @2021 <span class="primary-color">SportGear</span> - A sua loja de de produtos esportivos</p>
     </div>
   </footer>
+  <script src="./index.js"></script>
+  <script src="./main.js"></script>
 </body>
 </html>

@@ -137,6 +137,7 @@ body {
 /* BOTTOM NAVBAR */
 #bottom-navbar-container .container {
   justify-content: flex-end;
+  color: #333;
 }
 
 #bottom-navbar-container a {

@@ -1,0 +1,87 @@
+Claro, vou criar uma página HTML chamada "area_pessoal.html" que o usuário poderá acessar após fazer login no site. Lembre-se de que essa é apenas uma estrutura básica, e você pode personalizá-la de acordo com as necessidades do seu site.
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/styles.css"> <!-- Inclua seus estilos CSS aqui, se necessário -->
+  <title>Área Pessoal</title>
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg primary-bg-color py-4 px-2" id="navbar">
+    <div class="container">
+      <a class="navbar-brand" href="#">SportGear</a>
+      <div id="navbar-items">
+        <div></div>
+        <form class="d-flex" id="search-form">
+          <i class="bi bi-search primary-color"></i>
+          <input class="form-control me-2" type="search" placeholder="Pesquisar produto." aria-label="Search">
+          <button class="btn secondary-bg-color" type="submit">Pesquisar</button>
+        </form>
+        <ul class="navbar-nav mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <i class="bi bi-person"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <i class="bi bi-heart"></i>
+            </a>
+            <span class="qty-info">5</span>
+          </li>
+          <li class="nav-item" id="bag-item">
+            <a class="nav-link" href="#">
+              <i class="bi bi-bag"></i>
+              <b>R$ 1290,12</b>
+            </a>
+            <span class="qty-info">8</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- FIM NAVBAR -->
+
+  <!-- ÁREA PESSOAL -->
+  <div class="container" id="area-pessoal-container">
+    <h2 class="title primary-color">Bem-vindo à sua Área Pessoal</h2>
+    <div class="row">
+      <div class="col-12 col-md-6">
+        <h3>Seus Dados</h3>
+        <!-- Insira aqui os campos para mostrar os dados do usuário, como nome, email, etc. -->
+        <p>Nome: John Doe</p>
+        <p>Email: john@example.com</p>
+        <!-- Adicione outros campos conforme necessário -->
+      </div>
+      <div class="col-12 col-md-6">
+        <h3>Seus Pedidos</h3>
+        <!-- Lista de pedidos do usuário -->
+        <ul>
+          <li>Pedido #12345 - Status: Pendente</li>
+          <li>Pedido #67890 - Status: Entregue</li>
+          <!-- Adicione mais pedidos conforme necessário -->
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- FIM ÁREA PESSOAL -->
+
+  <!-- FOOTER -->
+  <footer id="footer">
+    <!-- O conteúdo do rodapé pode ser o mesmo que na página principal -->
+    <!-- Inclua os links para as páginas de política, contato, etc. -->
+    <!-- Você pode copiar e colar o código do rodapé da página principal aqui -->
+  </footer>
+
+  <!-- Scripts JavaScript -->
+  <script src="js/area_pessoal.js"></script> <!-- Inclua seus scripts JavaScript aqui, se necessário -->
+</body>
+</html>
+```
+
+Certifique-se de incluir os campos e informações relevantes na área pessoal, como os dados do usuário, histórico de pedidos e outros detalhes específicos do usuário logado. Além disso, se você tiver estilos CSS e scripts JavaScript específicos para a área pessoal, inclua-os nos locais apropriados e ajuste os caminhos de arquivos conforme necessário.
