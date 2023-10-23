@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
         var bestSellersContainer = document.getElementById('best-sellers');
 
         data.forEach(item => {
+            console.log(item)
             var col = document.createElement('div');
             col.className = 'col-12 col-md-3';
             var card = document.createElement('div');
@@ -27,9 +28,9 @@ document.addEventListener('DOMContentLoaded', function() {
             detailLink.className = 'card-link'; // Adicione uma classe para o link
 
             var img = document.createElement('img');
-            img.src = item.imageUrl;
+            img.src = item.image;
             img.className = 'card-img-top img-fluid';
-            img.alt = item.altText;
+            img.alt = item.title;
 
             var cardBody = document.createElement('div');
             cardBody.className = 'card-body';
@@ -40,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             var title = document.createElement('h5');
             title.className = 'card-title';
-            title.textContent = item.name;
+            title.textContent = item.title;
 
             var price = document.createElement('p');
             price.className = 'card-text primary-color';
