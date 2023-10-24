@@ -50,4 +50,11 @@ public class    ItensController {
         }
     }
 
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
+    @GetMapping("/newItems")
+    public List<ItensResponseDTO> getNewItems() {
+        List<ItensResponseDTO> itensList = repository.findAllOrderedByCreated_atDesc().stream().map(ItensResponseDTO::new).toList();
+        return itensList;
+    }
+
 }
