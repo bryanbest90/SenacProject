@@ -10,13 +10,12 @@ import jakarta.persistence.*;
 
 import javax.validation.constraints.Email;
 
+@Entity
 @Table(name ="users")
-@Entity(name = "users")
-@Getter()
+@Getter
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode(of = "id")
-
 public class User {
 
 

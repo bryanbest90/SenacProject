@@ -52,11 +52,11 @@ public class UserController {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, "usuário não encontrado");
         }
         }
-    @CrossOrigin(origins = "*", allowedHeaders = "*")
-    @GetMapping("/newUsers")
-    public List<UserResponseDTO> getNewUsers(){
-        List<UserResponseDTO> userList = repository.findAllOrderedByCreated_atDesc().stream().map(UserResponseDTO::new).toList();
-        return userList;
-    }
+//    @CrossOrigin(origins = "*", allowedHeaders = "*")
+//    @GetMapping("/newUsers")
+//    public List<UserResponseDTO> getNewUsers(){
+//        List<UserResponseDTO> userList = repository.findAllOrderedByCreated_atDesc().stream().map(UserResponseDTO::new).toList();
+//        return userList;
+//    }
 
 }
