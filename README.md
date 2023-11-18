@@ -28,6 +28,7 @@ CREATE TABLE ITENS (
 	id bigserial not null primary key,
 	title varchar(100) not null,
 	image varchar(200) not null,
+ 	description varchar(8000) not null,
 	price numeric(10, 2)
 );
 
