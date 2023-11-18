@@ -1,17 +1,25 @@
 # SenacProject
+
 Softwares necessários
+
 Docker Desktop
+
 Java 17
+
 PostgreSQL
 
-Integrantes do grupo
+# Integrantes do grupo
+
 Bryan Mendes Deodato
+
 Diogo do Nascimento Gomes
+
 Elaine Patricia dos Santos
+
 Gustavo Pereira Campos
 
 
-Para criar o banco de dados local é necessário rodar o script abaixo
+# Script SQL
 
  
 CREATE DATABASE senac-projeto;
@@ -20,6 +28,7 @@ CREATE TABLE ITENS (
 	id bigserial not null primary key,
 	title varchar(100) not null,
 	image varchar(200) not null,
+ 	description varchar(8000) not null,
 	price numeric(10, 2)
 );
 
@@ -29,7 +38,9 @@ CREATE TABLE USERS (
 	email varchar(100) not null
 );
  
-Para inserir as informações no banco é necessário rodar o seguinte script json, via insomnia ou postman
+# Script Json para alimentar o banco
+
+pode ser executado via postaman ou insomnia
 
 
 {
@@ -79,16 +90,20 @@ Para inserir as informações no banco é necessário rodar o seguinte script js
 	]
 }
 
-Para subir o banco de dados é necessário
+# Subindo o Banco de Dados
+
 1-	o abrir o arquivo Docker-compose.yaml, localizado na pasta SenacProject\backend 
+
 2-	executar o serviço db
-[executanod serviço db](https://github.com/gupcampos/ADO-SO/blob/main/rodar%2520o%2520banco%2520via%2520docker_converted.gif?raw=true)
+
+![rodar20o20banco20via20docker_converted](https://github.com/gupcampos/SenacProject/assets/92448981/de04538e-0c80-4eda-a8e1-f4377aa587c7)
 
 
+# Subindo Backend
 
-Para subir o Backend do Projeto é necessário 
 1-	abrir o arquivo DemoApplication.java localizado em SenacProject\backend\src\main\java\com\senacproject\demo\DemoApplication.java
-2-	executar a main
-[executando a main](https://github.com/gupcampos/ADO-SO/blob/main/SenacProject%2520%25E2%2580%2593%2520DemoApplication.java%2520%255Bdemo%255D%25202023-11-17%252013-24-40_converted.gif?raw=true)
 
+2-	executar a main
+
+![rodando20o20backend20da20aplicaC3A7C3A3o_converted (1)](https://github.com/gupcampos/SenacProject/assets/92448981/51c89828-35b4-4aba-83e8-fa52b1bd8778)
 
