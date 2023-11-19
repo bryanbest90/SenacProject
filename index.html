@@ -19,6 +19,10 @@
   <link rel="stylesheet" href="css/styles.css">
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  
+  <script src="./index.js"></script>
+  <script src="./main.js"></script>
+  
 </head>
 <body>
   <!-- NAVBAR -->
@@ -48,10 +52,22 @@
           </li>
           <li class="nav-item" id="bag-item">
             <a class="nav-link" href="#">
-              <i class="bi bi-bag"></i>
-              <b>R$ 1290,12</b>
+              <b id="open-modal" class="bi bi-bag"></b>
+              <div id="fade" class="hide"></div>
+              <div id="modal" class="hide">
+                <div class="modal-header">
+                  <h2>Carrinho</h2>
+                  <button id="close-modal">Fechar</button>
+                </div>
+                <div class="modal-body">
+                  
+                </div>
+              </div>
+              <b>
+                R$ 0,00
+              </b>
             </a>
-            <span class="qty-info">8</span>
+            <span class="qty-info"></span>
           </li>
         </ul>
       </div>
@@ -110,6 +126,14 @@
         <span class="visually-hidden">Next</span>
       </button>
     </div>
+    <dialog open>
+                  
+      <div id="new-cart" class="col-12 col-md-9">
+        <!-- O conteúdo será adicionado dinamicamente aqui -->
+        
+      </div>
+    
+    </dialog>
     <!-- MINI BANNERS -->
     <div class="container" id="mini-banners">
       <div class="row justify-content-around">
@@ -137,6 +161,7 @@
     <h2 class="title primary-color">Best Sellers</h2>
     <div class="row" id="best-sellers">
         <!-- Os cards serão criados dinamicamente aqui -->
+        
     </div>
 </div>
   <!-- BANNER DESTAQUE -->
@@ -155,20 +180,20 @@
   
   </div>
   <!-- PRODUTOS NOVOS -->
-<div class="container">
-  <h2 class="title primary-color">Novidades</h2>
-  <div class="row">
-    <div class="col-12 col-md-3 d-none d-md-flex" id="new-products-banner">
-      <p class="secondary-color">Os melhores</p>
-      <h3>Fitness</h3>
-      <p class="primary-color">pelos melhores preços</p>
-    </div>
-    <div id="new-products" class="col-12 col-md-9">
-      <!-- O conteúdo será adicionado dinamicamente aqui -->
+  <div class="container">
+    <h2 class="title primary-color">Novidades</h2>
+    <div class="row">
+      <div class="col-12 col-md-3 d-none d-md-flex" id="new-products-banner">
+        <p class="secondary-color">Os melhores</p>
+        <h3>Fitness</h3>
+        <p class="primary-color">pelos melhores preços</p>
+      </div>
+      <div id="new-products" class="col-12 col-md-9">
+        <!-- O conteúdo será adicionado dinamicamente aqui -->
+        
+      </div>
     </div>
   </div>
-</div>
-
   <!-- GALLERY -->
   <div class="container-fluid" id="gallery">
     <div class="row">
@@ -236,7 +261,6 @@
       <p>Todos os direitos reservados @2021 <span class="primary-color">SportGear</span> - A sua loja de de produtos esportivos</p>
     </div>
   </footer>
-  <script src="./index.js"></script>
-  <script src="./main.js"></script>
+  
 </body>
 </html>
