@@ -35,7 +35,8 @@ CREATE TABLE ITENS (
 CREATE TABLE USERS (
 	id bigserial not null primary key,
 	username varchar(100) not null,
-	email varchar(100) not null
+	email varchar(100) not null,
+ 	password varchar(100) not null
 );
  
 # Script Json para alimentar o banco
