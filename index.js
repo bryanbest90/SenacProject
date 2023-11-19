@@ -7,6 +7,19 @@ document.addEventListener('DOMContentLoaded', function() {
         cache: "default",
     };
 
+    const openModalButton = document.querySelector('#open-modal');
+    const closeModalButton = document.querySelector('#close-modal');
+    const modal = document.querySelector('#modal');
+    const fade = document.querySelector('#fade');
+
+    const toggleModal = () => {
+        [modal, fade].forEach((el) => el.classList.toggle('hide'));
+    };
+
+    [openModalButton, closeModalButton, fade].forEach((el) => {
+        el.addEventListener('click', () => toggleModal());
+    });
+
     fetch("http://localhost:8080/itens", myInit)
         .then(function(response) {
             return response.json();
@@ -48,10 +61,71 @@ document.addEventListener('DOMContentLoaded', function() {
                 price.textContent = 'R$' + item.price.toFixed(2);
 
                 var buyButton = document.createElement('a');
-                buyButton.href = item.buyUrl;
+                /* buyButton.href = item.buyUrl; */
                 buyButton.className = 'btn btn-primary';
-                buyButton.textContent = 'Comprar';
+                buyButton.textContent = 'Adicionar ao carrinho';
 
+                buyButton.onclick = function() {
+                    console.log(item.title)
+
+                    var bestSellersContainer = document.getElementById('modal');
+                    bestSellersContainer.classList.add('row');
+
+                    var col = document.createElement('div');
+                    col.className = 'col-12 col-md-4 mb-4'; // Colunas para dispositivos pequenos e médios
+
+                    var card = document.createElement('div');
+                    card.className = 'card primary-bg-color h-100';
+
+                    var detailLink = document.createElement('a');
+                    detailLink.href = 'detalhes.html?id=' + item.id;
+                    detailLink.className = 'card-link';
+
+                    var img = document.createElement('img');
+                    img.src = item.image;
+                    img.className = 'card-img-top img-fluid';
+                    img.alt = item.title;
+
+                    var cardBody = document.createElement('div');
+                    cardBody.className = 'card-body';
+
+                    var category = document.createElement('p');
+                    category.className = 'card-category secondary-color';
+                    category.textContent = item.category;
+
+                    var title = document.createElement('h5');
+                    title.className = 'card-title';
+                    // Limitar o título a 45 caracteres com "..." em caso de excesso
+                    title.textContent = item.title.length <= 45 ? item.title : item.title.substring(0, 45) + '...';
+
+                    var price = document.createElement('p');
+                    price.className = 'card-text';
+                    price.textContent = 'R$' + item.price.toFixed(2);
+
+                    var removeButton = document.createElement('a');
+                    /* buyButton.href = item.buyUrl; */
+                    removeButton.className = 'btn btn-primary';
+                    removeButton.textContent = 'Remover';
+
+                    removeButton.onclick = function(event) {
+                        event.target.parentElement.parentElement.remove()
+                    }
+
+                    cardBody.appendChild(category);
+                    cardBody.appendChild(title);
+                    cardBody.appendChild(price);
+                    cardBody.appendChild(removeButton);
+
+                    detailLink.appendChild(img);
+                    card.appendChild(detailLink);
+                    card.appendChild(cardBody);
+
+                    col.appendChild(card);
+                    bestSellersContainer.appendChild(col);
+
+
+                }
+               
                 cardBody.appendChild(category);
                 cardBody.appendChild(title);
                 cardBody.appendChild(price);
@@ -117,7 +191,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 var buyButton = document.createElement('a');
                 buyButton.href = item.buyUrl;
                 buyButton.className = 'btn btn-primary';
-                buyButton.textContent = 'Comprar';
+                buyButton.textContent = 'Adicionar ao carrinho';
 
                 cardBody.appendChild(category);
                 cardBody.appendChild(title);
