@@ -1,4 +1,4 @@
 package com.senacproject.demo.user;
 
-public class UserRequestDTO {
+public record UserRequestDTO(String username, String email, String password) {
 }
