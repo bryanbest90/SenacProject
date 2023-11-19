@@ -66,16 +66,15 @@ document.addEventListener('DOMContentLoaded', function() {
                 buyButton.textContent = 'Adicionar ao carrinho';
 
                 buyButton.onclick = function() {
-                    console.log(item.title)
 
                     var bestSellersContainer = document.getElementById('modal');
                     bestSellersContainer.classList.add('row');
-
+                    
                     var col = document.createElement('div');
                     col.className = 'col-12 col-md-4 mb-4'; // Colunas para dispositivos pequenos e médios
 
                     var card = document.createElement('div');
-                    card.className = 'card primary-bg-color h-100';
+                    card.className = 'card primary-bg-color h-100 cart';
 
                     var detailLink = document.createElement('a');
                     detailLink.href = 'detalhes.html?id=' + item.id;
@@ -108,9 +107,15 @@ document.addEventListener('DOMContentLoaded', function() {
                     removeButton.textContent = 'Remover';
 
                     removeButton.onclick = function(event) {
-                        event.target.parentElement.parentElement.remove()
+                        var remove = event.target.parentElement.parentElement;
+                        remove.remove();
                     }
 
+                    /* const cartProducts = document.getElementsByClassName('card primary-bg-color h-100 cart');
+                        for(var i = 0; i < cartProducts.length; i++) {
+                            console.log(cartProducts[i]);
+                    } */
+                    
                     cardBody.appendChild(category);
                     cardBody.appendChild(title);
                     cardBody.appendChild(price);
@@ -122,7 +127,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
                     col.appendChild(card);
                     bestSellersContainer.appendChild(col);
-
 
                 }
                
